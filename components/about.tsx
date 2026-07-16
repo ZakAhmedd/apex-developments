@@ -2,7 +2,7 @@ import { Reveal } from '@/components/reveal'
 
 const stats = [
   { value: '15+', label: 'Years of experience' },
-  { value: '120+', label: 'Projects delivered' },
+  { value: '120+', label: 'Happy Clients' },
   { value: '100%', label: 'Client focused' },
 ]
 
