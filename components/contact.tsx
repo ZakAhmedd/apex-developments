@@ -1,27 +1,49 @@
-'use client'
+"use client";
 
-import { useState, type FormEvent } from 'react'
-import { Phone, Mail, MapPin, Check } from 'lucide-react'
-import { Button } from '@/components/ui/button'
-import { Reveal } from '@/components/reveal'
+import { useState, type FormEvent } from "react";
+import { Phone, Mail, MapPin, Check } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Reveal } from "@/components/reveal";
 
 const details = [
-  { icon: Mail, label: 'Email', value: 'hello@apexdevelopments.co.uk', href: 'mailto:hello@apexdevelopments.co.uk' },
-]
+  {
+    icon: Mail,
+    label: "Email",
+    value: "hello@apexdevelopments.co.uk",
+    href: "mailto:hello@apexdevelopments.co.uk",
+  },
+];
 
 const inputClasses =
-  'w-full rounded-lg border border-border bg-card px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground transition-colors focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/25'
+  "w-full rounded-lg border border-border bg-card px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground transition-colors focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/25";
 
 export function Contact() {
-  const [submitted, setSubmitted] = useState(false)
+  const [submitted, setSubmitted] = useState(false);
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
-    e.preventDefault()
-    setSubmitted(true)
-  }
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    const formData = new FormData(e.currentTarget);
+
+    formData.append("access_key", process.env.NEXT_PUBLIC_WEB3FORMS_KEY!);
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData,
+    });
+
+    const result = await response.json();
+
+    if (result.success) {
+      alert("Message sent successfully!");
+    }
+  };
 
   return (
-    <section id="contact" className="scroll-mt-20 bg-secondary/90 py-24 md:py-32">
+    <section
+      id="contact"
+      className="scroll-mt-20 bg-secondary/90 py-24 md:py-32"
+    >
       <div className="mx-auto max-w-[1200px] px-6 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-20">
           <Reveal>
@@ -130,7 +152,10 @@ export function Contact() {
                       className={`${inputClasses} resize-none`}
                     />
                   </div>
-                  <Button type="submit" className="h-12 w-full rounded-full cursor-pointer hover:bg-primary/70">
+                  <Button
+                    type="submit"
+                    className="h-12 w-full rounded-full cursor-pointer hover:bg-primary/70"
+                  >
                     Send
                   </Button>
                 </form>
@@ -140,5 +165,5 @@ export function Contact() {
         </div>
       </div>
     </section>
-  )
+  );
 }
