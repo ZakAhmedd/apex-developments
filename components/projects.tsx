@@ -51,7 +51,7 @@ export function Projects() {
         <div className="mt-14 grid lg:grid-cols-4 gap-6">
           {projects.map((project, i) => (
             <Reveal
-              key={project.title}
+              key={project.src}
               delay={(i % 2) * 100}
               as="article"
               className={project.span}

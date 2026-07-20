@@ -73,7 +73,7 @@ export function About() {
         <Reveal delay={200}>
           <div className="mt-24 border-t border-border pt-16">
             <div className="max-w-3xl">
-              <p className="mb-3 text-sm font-medium uppercase tracking-[0.2em] text-white">
+              <p className="mb-10 text-sm font-medium uppercase tracking-[0.2em] text-white">
                 Serviced Accommodation Providers
               </p>
 
@@ -90,7 +90,7 @@ export function About() {
                 detail to ensure an exceptional stay.
               </p>
             </div>
-            <div className="mt-25 flex gap-20">
+            <div className="mt-25 flex flex-wrap gap-5 md:gap-20">
               {projects.map((project, i) => (
                 <Reveal
                   key={project.src}
@@ -99,20 +99,21 @@ export function About() {
                   className={project.span}
                 >
                   <div className="group">
-                    <div className="relative mx-auto w-full max-w-md overflow-hidden rounded-xl">
+                    <div className="relative w-full max-w-md overflow-hidden rounded-xl">
                       <img
                         src={project.src || "/placeholder.svg"}
                         alt={`${project.title} in ${project.location}`}
                         className={`${project.ratio} w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105`}
                       />
 
-                      <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 via-foreground/10 to-transparent opacity-100 lg:opacity-0 transition-opacity duration-500 lg:group-hover:opacity-100" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 via-foreground/10 to-transparent opacity-0 transition-opacity duration-500 lg:group-hover:opacity-100" />
 
-                      <div className="absolute inset-x-0 bottom-0 p-6 opacity-100 translate-y-0 lg:translate-y-3">
-                        <p className="text-[10px] md:text-sm font-medium uppercase tracking-[0.2em] text-white">
+                      <div className="absolute bottom-0 left-0 p-4 md:p-6">
+                        <p className="text-xs font-medium uppercase tracking-[0.2em] text-white md:text-sm">
                           {project.location}
                         </p>
-                        <h3 className="mt-1 font-serif md:text-2xl font-semibold text-white">
+
+                        <h3 className="mt-1 font-serif text-xl font-semibold text-white md:text-2xl">
                           {project.title}
                         </h3>
                       </div>
