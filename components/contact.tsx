@@ -33,10 +33,6 @@ export function Contact() {
     });
 
     const result = await response.json();
-
-    if (result.success) {
-      alert("Message sent successfully!");
-    }
   };
 
   return (
