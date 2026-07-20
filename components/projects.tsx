@@ -1,25 +1,28 @@
-import { Reveal } from '@/components/reveal'
+import { Reveal } from "@/components/reveal";
 
 const projects = [
   {
-    src: '/images/hamilton1.jpg',
-    title: '1 Bed Apartment',
-    location: 'Hamilton, Scotland',
-    span: 'lg:col-span-2',
-    ratio: 'aspect-[16/10]',
+    src: "/images/hamilton1.jpg",
+    title: "1 Bed Apartment",
+    location: "Hamilton, Scotland",
+    span: "lg:col-span-2",
+    ratio: "aspect-[16/10]",
   },
   {
-    src: '/images/hamilton2.jpg',
-    title: '2 Bed Apartment',
-    location: 'Hamilton, Scotland',
-    span: 'lg:col-span-2',
-    ratio: 'aspect-[16/10]',
+    src: "/images/hamilton2.jpg",
+    title: "2 Bed Apartment",
+    location: "Hamilton, Scotland",
+    span: "lg:col-span-2",
+    ratio: "aspect-[16/10]",
   },
-]
+];
 
 export function Projects() {
   return (
-    <section id="projects" className="scroll-mt-20 py-24 md:py-32 bg-secondary/50">
+    <section
+      id="projects"
+      className="scroll-mt-20 py-24 md:py-32 bg-secondary/50"
+    >
       <div className="mx-auto max-w-[1200px] px-6 lg:px-8">
         <Reveal className="max-w-2xl">
           <p className="mb-5 flex items-center gap-3 text-sm font-medium uppercase tracking-[0.2em] text-white">
@@ -41,12 +44,13 @@ export function Projects() {
             >
               <div className="group relative overflow-hidden rounded-xl">
                 <img
-                  src={project.src || '/placeholder.svg'}
+                  src={project.src || "/placeholder.svg"}
                   alt={`${project.title} in ${project.location}`}
                   className={`${project.ratio} size-full object-cover transition-transform duration-700 ease-out group-hover:scale-105`}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 via-foreground/10 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-                <div className="absolute inset-x-0 bottom-0 translate-y-3 p-6 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+                <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 via-foreground/10 to-transparent opacity-100 lg:opacity-0 transition-opacity duration-500 lg:group-hover:opacity-100" />
+
+                <div className="absolute inset-x-0 bottom-0 p-6 opacity-100 translate-y-0 lg:opacity-0 lg:translate-y-3 transition-all duration-500 lg:group-hover:translate-y-0 lg:group-hover:opacity-100">
                   <p className="text-xs font-medium uppercase tracking-[0.2em] text-background/80">
                     {project.location}
                   </p>
@@ -67,5 +71,5 @@ export function Projects() {
         </Reveal>
       </div>
     </section>
-  )
+  );
 }
