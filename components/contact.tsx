@@ -23,7 +23,8 @@ export function Contact() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const formData = new FormData(e.currentTarget);
+    const form = e.currentTarget;
+    const formData = new FormData(form);
 
     formData.append("access_key", process.env.NEXT_PUBLIC_WEB3FORMS_KEY!);
 
@@ -33,6 +34,11 @@ export function Contact() {
     });
 
     const result = await response.json();
+
+    if (result.success) {
+      setSubmitted(true);
+      form.reset();
+    }
   };
 
   return (
