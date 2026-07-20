@@ -104,6 +104,18 @@ export function Contact() {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-5">
+                  <input
+                    type="hidden"
+                    name="subject"
+                    value="New Apex Developments enquiry"
+                  />
+
+                  <input
+                    type="hidden"
+                    name="from_name"
+                    value="Apex Developments Website"
+                  />
+
                   <div>
                     <label
                       htmlFor="name"
