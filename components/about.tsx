@@ -21,20 +21,6 @@ const projects = [
     span: "lg:col-span-1",
     ratio: "aspect-[16/10]",
   },
-  {
-    src: "/images/lanark2.jpg",
-    title: "2 Bed Apartment",
-    location: "Lanark",
-    span: "lg:col-span-1",
-    ratio: "aspect-[16/10]",
-  },
-  {
-    src: "/images/lanark1.jpg",
-    title: "1 Bed Apartment",
-    location: "Lanark",
-    span: "lg:col-span-1",
-    ratio: "aspect-[16/10]",
-  },
 ];
 
 export function About() {
@@ -104,7 +90,7 @@ export function About() {
                 detail to ensure an exceptional stay.
               </p>
             </div>
-            <div className="mt-25 grid lg:grid-cols-4 gap-6">
+            <div className="mt-25 flex gap-20">
               {projects.map((project, i) => (
                 <Reveal
                   key={project.src}
@@ -112,21 +98,24 @@ export function About() {
                   as="article"
                   className={project.span}
                 >
-                  <div className="group relative overflow-hidden rounded-xl">
-                    <img
-                      src={project.src || "/placeholder.svg"}
-                      alt={`${project.title} in ${project.location}`}
-                      className={`${project.ratio} size-full object-cover transition-transform duration-700 ease-out group-hover:scale-105`}
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 via-foreground/10 to-transparent opacity-100 lg:opacity-0 transition-opacity duration-500 lg:group-hover:opacity-100" />
+                  <div className="group">
+                    <div className="relative mx-auto w-full max-w-md overflow-hidden rounded-xl">
+                      <img
+                        src={project.src || "/placeholder.svg"}
+                        alt={`${project.title} in ${project.location}`}
+                        className={`${project.ratio} w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105`}
+                      />
 
-                    <div className="absolute inset-x-0 bottom-0 p-6 opacity-100 translate-y-0 lg:translate-y-3">
-                      <p className="md:text-xs text-white text-[10px] font-medium uppercase tracking-[0.2em]">
-                        {project.location}
-                      </p>
-                      <h3 className="mt-1 font-serif md:text-md font-semibold text-white">
-                        {project.title}
-                      </h3>
+                      <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 via-foreground/10 to-transparent opacity-100 lg:opacity-0 transition-opacity duration-500 lg:group-hover:opacity-100" />
+
+                      <div className="absolute inset-x-0 bottom-0 p-6 opacity-100 translate-y-0 lg:translate-y-3">
+                        <p className="text-[10px] md:text-sm font-medium uppercase tracking-[0.2em] text-white">
+                          {project.location}
+                        </p>
+                        <h3 className="mt-1 font-serif md:text-2xl font-semibold text-white">
+                          {project.title}
+                        </h3>
+                      </div>
                     </div>
                   </div>
                 </Reveal>

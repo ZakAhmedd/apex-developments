@@ -9,6 +9,20 @@ const projects = [
     ratio: "aspect-[16/10]",
   },
   {
+    src: "/images/lanark2.jpg",
+    title: "2 Bed Apartment",
+    location: "Lanark, Scotland",
+    span: "lg:col-span-2",
+    ratio: "aspect-[16/10]",
+  },
+  {
+    src: "/images/lanark1.jpg",
+    title: "1 Bed Apartment",
+    location: "Lanark, Scotland",
+    span: "lg:col-span-2",
+    ratio: "aspect-[16/10]",
+  },
+  {
     src: "/images/hamilton2.jpg",
     title: "2 Bed Apartment",
     location: "Hamilton, Scotland",
