@@ -118,6 +118,10 @@ export function Contact() {
                     value="Apex Developments Website"
                   />
 
+                  <input type="hidden" name="replyto" value="email" />
+
+                  <input type="hidden" name="botcheck" value="" />
+
                   <div>
                     <label
                       htmlFor="name"
