@@ -9,8 +9,8 @@ const details = [
   {
     icon: Mail,
     label: "Email",
-    value: "hello@apexdevelopments.co.uk",
-    href: "mailto:hello@apexdevelopments.co.uk",
+    value: "imran@apexdevelopmentsuk.com",
+    href: "mailto:imran@apexdevelopmentsuk.com",
   },
 ];
 
