@@ -51,10 +51,10 @@ export function Projects() {
                 <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 via-foreground/10 to-transparent opacity-100 lg:opacity-0 transition-opacity duration-500 lg:group-hover:opacity-100" />
 
                 <div className="absolute inset-x-0 bottom-0 p-6 opacity-100 translate-y-0 lg:opacity-0 lg:translate-y-3 transition-all duration-500 lg:group-hover:translate-y-0 lg:group-hover:opacity-100">
-                  <p className="text-xs font-medium uppercase tracking-[0.2em] text-background/80">
+                  <p className="md:text-xs text-[10px] font-medium uppercase tracking-[0.2em] text-background/80">
                     {project.location}
                   </p>
-                  <h3 className="mt-1 font-serif text-2xl font-semibold text-background">
+                  <h3 className="mt-1 font-serif md:text-2xl font-semibold text-background">
                     {project.title}
                   </h3>
                 </div>
