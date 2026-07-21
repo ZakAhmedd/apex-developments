@@ -29,9 +29,9 @@ export function Hero() {
             Building Exceptional Homes. Creating Lasting Value.
           </h1>
           <p className="mt-7 max-w-xl text-pretty text-lg leading-relaxed text-white">
-            Professional property development and renovation services,
-            delivering high-quality projects with attention to detail and
-            craftsmanship.
+            Professional serviced accommodation provision, property development
+            and renovation services, delivering high-quality projects with
+            attention to detail and craftsmanship.
           </p>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
             <a
