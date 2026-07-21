@@ -17,9 +17,10 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: "Apex Developments | Building Exceptional Homes",
+  title:
+    "Apex Developments | Serviced Accommodation, Property Development & Renovations",
   description:
-    "Apex Developments is a UK property development and renovation company delivering high-quality residential projects with craftsmanship, attention to detail, and lasting value.",
+    "Apex Developments provides serviced accommodation, property development, and renovation services across Scotland, delivering high-quality residential projects, modern short-term stays, and exceptional craftsmanship.",
   generator: "v0.app",
   icons: {
     icon: "/icon.png",
