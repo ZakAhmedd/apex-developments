@@ -46,7 +46,7 @@ const Faq = () => {
     <Reveal>
     <section
       id="faqs"
-      className="mt-10 md:py-[100px] bg-black w-full layout-container"
+      className="mt-10 py-16 md:py-24 bg-black w-full layout-container"
     >
       <div className="flex gap-5 w-fit bg-[#F6945C1A] rounded-full items-center px-5 py-2 mx-auto">
         <h1 className="text-[#F6945C] text-sm">FAQ's</h1>
@@ -113,7 +113,7 @@ const Faq = () => {
                     </span>
                   </button>
                   <div
-                    className={`overflow-hidden transition-all duration-500 ease-in-out ${openIndex === index ? "max-h-40 opacity-100" : "max-h-0 opacity-0"}`}
+                    className={`overflow-hidden transition-all duration-500 ease-in-out ${openIndex === index ? "max-h-50 opacity-100" : "max-h-0 opacity-0"}`}
                   >
                     <div className="px-5 py-4">
                       <p className="text-sm font-light text-zinc-200 leading-relaxed">
