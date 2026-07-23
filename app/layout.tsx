@@ -1,4 +1,5 @@
 import { Analytics } from "@vercel/analytics/next";
+import Script from "next/script";
 import type { Metadata, Viewport } from "next";
 import { Inter, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
@@ -44,7 +45,22 @@ export default function RootLayout({
       className={`bg-background ${inter.variable} ${cormorant.variable}`}
     >
       <body className="font-sans antialiased">
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=AW-18344624491"
+        />
+
+        <Script id="google-ads-tag">
+          {`
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-18344624491');
+    `}
+        </Script>
+
         {children}
+
         {process.env.NODE_ENV === "production" && <Analytics />}
       </body>
     </html>
