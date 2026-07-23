@@ -26,7 +26,7 @@ export function Hero() {
             UK Property Development
           </p>
           <h1 className="text-balance font-serif text-5xl font-semibold leading-[1.05] text-white sm:text-6xl lg:text-7xl">
-            Building Exceptional Homes. Creating Lasting Value.
+            Premium Serviced Accommodation in Hamilton & Lanark
           </h1>
           <p className="mt-7 max-w-xl text-pretty text-lg leading-relaxed text-white">
             Providing serviced accommodation alongside professional property
